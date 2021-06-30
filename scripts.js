@@ -264,6 +264,7 @@ Function Scroll Effects
 function ScrollEffects() {
 		
 		gsap.defaults({overwrite: "auto"});
+		gsap.config({nullTargetWarn: false});
 		gsap.registerPlugin(ScrollToPlugin);
 		gsap.registerPlugin(Draggable);
 		gsap.registerPlugin(EasePack);
@@ -762,9 +763,10 @@ function ScrollEffects() {
 				});
 			});
 		});
-		
-		
-		$('#project-nav.change-header').each(function(){
+
+		if (!$('#page-content').hasClass("dark-content")) {
+				
+			$('#project-nav.change-header').each(function(){
 			const contentu = $('#page-content');
 			var $this = $(this);
 			var $thisHeight = $(this).outerHeight(true);
@@ -787,9 +789,10 @@ function ScrollEffects() {
 			if ($("body").hasClass("smooth-scroll")) {
 				scrollbar.addListener(() => {
 					whiteScene.refresh()
-				});
-			}
-		})
+					});
+				}
+			})
+		}
 		
 		if (!$('#page-content').hasClass("light-content")) {
 			if (!$('#project-nav').hasClass("change-header")) {
