@@ -529,7 +529,7 @@
 	
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 769px) {
 	
 	
 	.hero-title, .next-hero-title {
@@ -551,7 +551,9 @@
 	}
 	
 	.hero-footer-left .button-text {
-		display:none;
+		transform: rotate(-90deg) scale(.6);
+    	transform-origin: left;
+		margin: -33px -33px !important;
 	}
 	
 }
