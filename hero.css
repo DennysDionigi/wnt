@@ -553,7 +553,7 @@
 	.hero-footer-left .button-text {
 		transform: rotate(-90deg) scale(.6);
     	transform-origin: left;
-		margin: -33px -33px !important;
+		margin: -33px -32px !important;
 	}
 	
 }
